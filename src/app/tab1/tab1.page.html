@@ -1,0 +1,513 @@
+<!-- <ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-button>
+        <ion-icon slot="end" name="grid-outline"></ion-icon>
+      </ion-button>
+    </ion-button>
+    <ion-button slot="end">
+      <ion-button>
+        <ion-icon slot="start" name="search"></ion-icon>
+      </ion-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header class="ion-no-border" [translucent]="true" #header>
+  <ion-item lines="none">
+    <ion-avatar slot="end">
+      <img
+        src="https://scontent.fcnx1-1.fna.fbcdn.net/v/t1.0-1/p200x200/119303647_2251003681709701_1195936349683289002_o.jpg?_nc_cat=105&_nc_sid=7206a8&_nc_eui2=AeHptN5BzSvBlqRUlweKr_G6NP8gWtssK-I0_yBa2ywr4vMvu6Y7BmoHiQ66BzztgbzGp2r1aU_Wm4G5L5SdYn8f&_nc_ohc=Gx6MLoq4CJYAX_2V1-c&_nc_ht=scontent.fcnx1-1.fna&tp=6&oh=14e4f5a658ddd62958e1c28bc0c74fef&oe=5F9170A9">
+    </ion-avatar>
+    <ion-label>
+      <h2> หนังสือออนไลน์</h2>
+      <p>สวัสดี คุณอนุชิต</p>
+    </ion-label>
+  </ion-item>
+</ion-header>
+
+<ion-content [fullscreen]="true" [scrollEvents]="true" (ionScroll)="ionScrolling($event)"
+  (ionScrollStart)="ionScrollStar(header)">
+  <!-- <ion-segment scrollable value="1">
+    <ion-segment-button value="1">
+      <ion-label>แนะนำ</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>ขายดีที่สุด</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="3">
+      <ion-label>ฟรี</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="4">
+      <ion-label>ลดราคา</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="5">
+      <ion-label>บริการ</ion-label>
+    </ion-segment-button>
+    
+  </ion-segment> -->
+
+  <!-- <ion-content [fullscreen]="true"> -->
+
+  <div class="ion-padding wrapper">
+
+    <ion-searchbar placeholder="ค้นหา"></ion-searchbar>
+
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="6">
+          <h4 class="title">
+            ยอดนิยม
+          </h4>
+        </ion-col>
+        <ion-col size="6">
+          <h4 class="more ion-text-end">
+            ดูเพิ่มเติม
+          </h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides [options]="options">
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="../assets/image/PHOTOSHOP_LIKE.jpg">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Dish Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="../assets/image/water4.jpg">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Dish Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://images.squarespace-cdn.com/content/v1/585385d3b8a79b44d2b256b4/1496351987104-4U2H4Z3256GZHVTZ9F9D/ke17ZwdGBToddI8pDm48kFxSuAw_g36b5VLi3rd803F7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UcdTNog8gxxM67xMkRUdYJEEzULK78qUJTMuKaGD6ifDoRwB-dUGsSquCnVTFQcaRg/Just_Travel_Front_Cover_Updated_New.png?format=1000w">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Dish Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://images-na.ssl-images-amazon.com/images/I/61JAQcCTHhL.jpg">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Dish Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://imgix.bustle.com/2017/5/16/ff6720c4-f9df-4eda-b222-364cf0589205.jpg">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Dish Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+
+
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://www.denofgeek.com/wp-content/uploads/2020/08/piranesi-.jpg?resize=678,1024">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Dish Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <div class="ion-padding-horizontal wrapper">
+
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="6">
+          <h4 class="title">
+            หมวดหมู่
+          </h4>
+        </ion-col>
+        <ion-col size="6">
+          <h4 class="more ion-text-end">
+            ดูเพิ่มเติม
+          </h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides [options]="categories">
+
+          <ion-slide>
+            <ion-card class="category" color="danger">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/witch.svg"></ion-icon>
+                <ion-card-title>Fantasy</ion-card-title>
+                <ion-card-subtitle>Something here</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" color="primary">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/knowledge.svg"></ion-icon>
+                <ion-card-title>Education</ion-card-title>
+                <ion-card-subtitle>Something here</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" color="warning">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/q.svg"></ion-icon>
+                <ion-card-title>Literature</ion-card-title>
+                <ion-card-subtitle>Something here</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" color="success">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/church.svg"></ion-icon>
+                <ion-card-title>Religion</ion-card-title>
+                <ion-card-subtitle>Something here</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" color="tertiary">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/taco.svg"></ion-icon>
+                <ion-card-title>Mexican</ion-card-title>
+                <ion-card-subtitle>Something here</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" color="danger">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/cookies.svg"></ion-icon>
+                <ion-card-title>Dessert</ion-card-title>
+                <ion-card-subtitle>Something here</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" color="secondary">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/noodle.svg"></ion-icon>
+                <ion-card-title>Noodle</ion-card-title>
+                <ion-card-subtitle>Something here</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+
+
+
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <div class="ion-padding-horizontal wrapper">
+
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="6">
+          <h4 class="title">
+
+            เครื่องดื่มแนะนำ
+          </h4>
+        </ion-col>
+        <ion-col size="6">
+          <h4 class="more ion-text-end">
+            ดูเพิ่มเติม
+          </h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides [options]="options">
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://images.penguinrandomhouse.com/cover/9781592408849">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://www.set.or.th/dat/setbooks/cover/Books_1560155429932.jpg">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://www.set.or.th/dat/setbooks/cover/Books_1548669122487.jpg">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+          
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://effectivepython.com/images/cover_2ed.jpg">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+          
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://img.monocle.com/gallery/pack-shot-cover-the-monocle-bo-5e633b1e88099.jpg?w=800&h=1067&g=center&q=75">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+          
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://image.slidesharecdn.com/0134852486-adobephotoshopccclassroominabookbyandrewfaulkner-181025074017/95/adobe-photoshop-cc-classroom-in-a-book-pdf-faulkner-1-638.jpg?cb=1540453258">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Some Awesome Title</ion-card-title>
+                <ion-card-subtitle>Some description here</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="ion-padding">
+    <!-- <ion-row>
+              <ion-col size="6">
+                <ion-badge color="light" class="ion-margin-end">
+                  Habib Dev.
+                </ion-badge>
+              </ion-col>
+              <ion-col size="6" class="ion-text-end">
+                <ion-badge color="light">
+                  habib.al-mawali.com
+                </ion-badge>
+              </ion-col>
+            </ion-row> -->
+  </div>
+
+</ion-content>
